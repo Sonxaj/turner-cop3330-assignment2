@@ -29,7 +29,7 @@ Complete this program without using built-in language features. Use selection or
 develop your own algorithm.
  */
 
-package assignment2.ex24;
+package assignment2.ex24.base;
 
 import java.util.Scanner;
 
@@ -38,7 +38,7 @@ public class App {
 
     public static void main(String[] args) {
         App myApp = new App();
-        anagramChecker checkWords = new anagramChecker();
+        AnagramChecker checkWords = new AnagramChecker();
 
         System.out.println("Enter two strings and I'll tell you if they are anagrams:\n");
 

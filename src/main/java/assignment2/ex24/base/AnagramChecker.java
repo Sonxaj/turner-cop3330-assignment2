@@ -1,9 +1,9 @@
-package assignment2.ex24;
+package assignment2.ex24.base;
 
 import java.util.Arrays;
 import java.util.Locale;
 
-public class anagramChecker {
+public class AnagramChecker {
 
     public String displayResult(boolean isAnagramResult, String word1, String word2){
         if(isAnagramResult){
