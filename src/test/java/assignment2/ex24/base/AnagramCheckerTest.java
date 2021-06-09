@@ -1,33 +1,36 @@
 package assignment2.ex24.base;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class AnagramCheckerTest {
 
-
-
-    @Test
-    void isAnagram_returning_the_right_answer() {
+    @ParameterizedTest
+    @ValueSource(strings = {"note", "tone"})
+    void isAnagram_returning_the_right_answer(String candidate) {
         //given
         AnagramChecker detector = new AnagramChecker();
 
         //when
-        boolean actual = detector.isAnagram("note", "note");
+        boolean actual = detector.isAnagram(candidate, "note");
 
         //then
         assertTrue(actual);
     }
 
 
-    @Test
-    void isAnagram_returns_false_for_nonAnagrams(){
+    @ParameterizedTest
+    @ValueSource(strings = {"note", "tone"})
+    void isAnagram_returns_false_for_nonAnagrams(String candidate){
         //given
         AnagramChecker checker = new AnagramChecker();
 
         //when
-        boolean actual = checker.isAnagram("note", "not");
+        boolean actual = checker.isAnagram(candidate, "not");
 
         //then
         assertFalse(actual);

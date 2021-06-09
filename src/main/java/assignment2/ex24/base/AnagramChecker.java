@@ -17,7 +17,7 @@ public class AnagramChecker {
     }
 
     public boolean isAnagram(String word1, String word2){
-        boolean out = false;
+        boolean out = false; //by default, assume they aren't anagrams
         word1 = sortedWord(word1);
         word2 = sortedWord(word2);
 
