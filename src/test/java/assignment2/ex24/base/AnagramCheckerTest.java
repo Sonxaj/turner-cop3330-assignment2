@@ -1,14 +1,52 @@
 package assignment2.ex24.base;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AnagramCheckerTest {
 
-    @org.junit.jupiter.api.Test
-    void isAnagram() {
+
+
+    @Test
+    void isAnagram_returning_the_right_answer() {
+        //given
+        AnagramChecker detector = new AnagramChecker();
+
+        //when
+        boolean actual = detector.isAnagram("note", "note");
+
+        //then
+        assertTrue(actual);
     }
 
-    @org.junit.jupiter.api.Test
+
+    @Test
+    void isAnagram_returns_false_for_nonAnagrams(){
+        //given
+        AnagramChecker checker = new AnagramChecker();
+
+        //when
+        boolean actual = checker.isAnagram("note", "not");
+
+        //then
+        assertFalse(actual);
+    }
+
+    @Test
     void sortedWord() {
+    }
+
+    @Test
+    void displayResult_is_returning_correct_string_if_words_are_anagrams(){
+        //given
+        AnagramChecker checker = new AnagramChecker();
+
+        //when
+        String expected = "\"note\" and \"tone\" are anagrams.";
+        String actual  = checker.displayResult(checker.isAnagram("note", "tone"), "note", "tone");
+
+        //then
+        assertEquals(expected, actual);
     }
 }

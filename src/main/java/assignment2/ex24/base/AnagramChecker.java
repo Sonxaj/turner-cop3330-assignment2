@@ -6,11 +6,14 @@ import java.util.Locale;
 public class AnagramChecker {
 
     public String displayResult(boolean isAnagramResult, String word1, String word2){
+        String out = "\"" + word1 + "\"" + " and " + "\"" + word2 + "\" are";
+
         if(isAnagramResult){
-            return "\"" + word1 + "\"" + " and " + "\"" + word2 + "\" are anagrams.";
+            out += " anagrams.";
         }else{
-            return "\"" + word1 + "\"" + " and " + "\"" + word2 + "\" are not anagrams.";
+            out += " not anagrams.";
         }
+        return out;
     }
 
     public boolean isAnagram(String word1, String word2){
