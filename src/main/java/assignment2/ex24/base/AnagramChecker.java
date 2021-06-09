@@ -21,9 +21,11 @@ public class AnagramChecker {
         word1 = sortedWord(word1);
         word2 = sortedWord(word2);
 
-        if(word1.equalsIgnoreCase(word2))
-            out = true;
-
+        if(word1.length() == word2.length()) { //length
+            if(word1.equalsIgnoreCase(word2)) { //content
+                out = true;
+            }
+        }
         return out;
     }
 
