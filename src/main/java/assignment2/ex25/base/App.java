@@ -45,14 +45,13 @@ public class App {
         App myApp = new App();
         PasswordCheck checker = new PasswordCheck();
 
-        System.out.println("Enter your password:");
-
         String input = myApp.getInput();
 
         System.out.println(checker.validationResult(checker.passwordValidator(input), input));
 }
 
     private String getInput() {
+        System.out.println("Enter your password:");
         return in.nextLine();
     }
 }
