@@ -1,0 +1,11 @@
+@startuml
+start
+:int sum = 0;
+while (i < 5 ?)
+  :Sout("Enter a number: ");
+  :sum += nextInt();
+  :i++;
+ endwhile(no)
+ :Print(sum);
+end
+@enduml
