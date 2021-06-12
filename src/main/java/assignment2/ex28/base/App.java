@@ -35,6 +35,7 @@ prompt only five times.
 
 package assignment2.ex28.base;
 
+import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -43,7 +44,7 @@ public class App {
 
     public static void main(String[] args) {
         App app = new App();
-        ArrayList<Integer> inputs = new ArrayList<>();
+        List<Integer> inputs = new ArrayList<>();
 
         for(int i = 0; i<5; i++){
             System.out.println("Enter a number: ");
@@ -53,12 +54,12 @@ public class App {
         app.printOut(app.genOut(app.sum(inputs)));
     }
 
-    public void getInput(int input, ArrayList<Integer> inputs){
+    public void getInput(int input, List<Integer> inputs){
         inputs.add(input);
     }
 
     // this can actually be tested
-    public int sum(ArrayList<Integer> inputs){
+    public int sum(List<Integer> inputs){
         int sum = 0;
         for (int i: inputs) {
             sum += i;

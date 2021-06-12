@@ -48,7 +48,7 @@ public class App {
         app.printTable(table);
     }
 
-    public void genTable(int [][] table){
+    public void genTable(int[][] table){
         for(int i = 0; i < 12; i++){
             for(int j = 0; j < 12; j++){
 

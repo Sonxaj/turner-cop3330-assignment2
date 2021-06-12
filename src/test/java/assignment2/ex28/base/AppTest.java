@@ -5,13 +5,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 class AppTest {
     App test = new App();
 
     @Test
     void sum_returns_the_actual_sum_of_inputs() {
-        ArrayList<Integer> inputs = new ArrayList<>();
+        List<Integer> inputs = new ArrayList<>();
 
         for(int i=0; i<5; i++){
             inputs.add(i+1);
