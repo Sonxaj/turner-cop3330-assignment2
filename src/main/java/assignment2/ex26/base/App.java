@@ -1,5 +1,5 @@
 /*
- *  UCF COP3330 Summer 2021 Assignment 25 Solution
+ *  UCF COP3330 Summer 2021 Assignment 26 Solution
  *  Copyright 2021 Jonas Turner
  */
 
@@ -47,5 +47,38 @@ or the amount needed to pay per month.
 
 package assignment2.ex26.base;
 
+import java.util.Scanner;
+
 public class App {
+    Scanner in = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        App myApp = new App();
+        PaymentCalculator calculator = new PaymentCalculator();
+
+        myApp.promptText(1);
+        int balance = myApp.in.nextInt();
+
+        myApp.promptText(2);
+        int apr = myApp.in.nextInt();
+
+        myApp.promptText(3);
+        int monthlyPayment = myApp.in.nextInt();
+
+        calculator.displayResult(
+                calculator.genResult(
+                        calculator.calculateMonthsUntilPaidOff(balance, apr, monthlyPayment)
+                )
+        );
+    }
+
+    public void promptText(int text){
+        String out = "";
+        switch (text){
+            case 1 -> out += "What is your balance?";
+            case 2 -> out += "What is the APR on the card?";
+            case 3 -> out += "What is the monthly payment you can make?";
+        }
+        System.out.println(out);
+    }
 }

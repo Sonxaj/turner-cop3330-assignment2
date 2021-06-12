@@ -8,7 +8,7 @@ public class PasswordCheck {
 
         int result = 0;
 
-        for(int i=0; i<(passArr.length-1); i++){
+        for(int i=0; i<(passArr.length); i++){
             // only numbers?
             if(Character.isDigit(passArr[i]) && password.length() < 8){
                 result = 1;
@@ -24,8 +24,8 @@ public class PasswordCheck {
         }
 
         // special characters?
-        for(int i=0; i<(passArr.length-1); i++){
-            for(int j=0; j<(specialChars.length-1); j++){
+        for(int i=0; i<(passArr.length); i++){
+            for(int j=0; j<(specialChars.length); j++){
                 if(Character.compare(passArr[i], specialChars[j]) == 0 && password.length() >= 8){
                     result = 4;
                     break;
