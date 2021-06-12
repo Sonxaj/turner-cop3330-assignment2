@@ -36,23 +36,31 @@ prompt only five times.
 package assignment2.ex28.base;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class App {
     static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
         App app = new App();
+        ArrayList<Integer> inputs = new ArrayList<>();
 
-        int sum = app.getInput();
-
-        app.printOut(app.genOut(sum));
-    }
-
-    public int getInput(){
-        int sum = 0;
         for(int i = 0; i<5; i++){
             System.out.println("Enter a number: ");
-            sum += in.nextInt();
+            app.getInput(in.nextInt(), inputs);
+        }
+
+        app.printOut(app.genOut(app.sum(inputs)));
+    }
+
+    public void getInput(int input, ArrayList<Integer> inputs){
+        inputs.add(input);
+    }
+
+    public int sum(ArrayList<Integer> inputs){
+        int sum = 0;
+        for (int i: inputs) {
+            sum += i;
         }
         return sum;
     }

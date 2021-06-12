@@ -4,17 +4,22 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+
 class AppTest {
+    App test = new App();
 
     @Test
-    void getInput() {
-    }
+    void sum_returns_the_actual_sum_of_inputs() {
+        ArrayList<Integer> inputs = new ArrayList<>();
 
-    @Test
-    void genOut() {
-    }
+        for(int i=0; i<5; i++){
+            inputs.add(i+1);
+        }
 
-    @Test
-    void printOut() {
+        int expected = 15;
+        int actual = test.sum(inputs);
+
+        assertEquals(expected, actual);
     }
 }
