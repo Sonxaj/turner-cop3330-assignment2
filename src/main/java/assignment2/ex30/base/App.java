@@ -44,6 +44,8 @@ public class App {
         int[][] table = new int[12][12];
 
         app.genTable(table);
+
+        app.printTable(table);
     }
 
     public void genTable(int [][] table){
@@ -53,7 +55,9 @@ public class App {
                 table[i][j] = (i+1)*(j+1);
             }
         }
+    }
 
+    public void printTable(int[][] table){
         for(int[] row : table){
             for(int i : row){
 

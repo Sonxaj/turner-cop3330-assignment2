@@ -16,13 +16,4 @@ class AppTest {
 
         assertEquals(expected, actual);
     }
-
-    @Test
-    void createOut() {
-        String expected, actual;
-        expected = "It will take 18 years to double your initial investment.";
-        actual = test.createOut(test.doMath(4));
-
-        assertEquals(expected, actual);
-    }
 }

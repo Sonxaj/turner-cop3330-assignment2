@@ -60,7 +60,6 @@ public class App {
         String input = in.nextLine();
         int num;
 
-        // catches letters
         while(true) {
             try {
                 num = Integer.parseInt(input);
@@ -72,6 +71,8 @@ public class App {
                         num = Integer.parseInt(in.nextLine());
                 }
                 break;
+
+            // catches letters
             } catch (NumberFormatException e) {
                 System.out.println("Sorry. That's not a valid input.");
                 System.out.println("What is the rate of return?");

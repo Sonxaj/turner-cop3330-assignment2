@@ -1,11 +1,17 @@
 @startuml
 start
-:int sum = 0;
-while (i < 5 ?)
-  :Sout("Enter a number: ");
-  :sum += nextInt();
-  :i++;
+:Arraylist<> inputs;
+
+ while (i < 5 ?)
+    :Sout("Enter a number: ");
+    :getInput(Scanner(), inputs);
+    :i++;
  endwhile(no)
- :Print(sum);
+
+ while (i < 5 ?)
+    :int sum += (i+1);
+ endwhile(no)
+
+ :Sout(sum);
 end
 @enduml

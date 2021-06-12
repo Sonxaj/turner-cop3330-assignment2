@@ -57,6 +57,7 @@ public class App {
         inputs.add(input);
     }
 
+    // this can actually be tested
     public int sum(ArrayList<Integer> inputs){
         int sum = 0;
         for (int i: inputs) {
