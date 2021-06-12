@@ -5,7 +5,8 @@
 
 /*
 Exercise 26 - Months to Pay Off a Credit Card
-It can take a lot longer to pay off your credit card balance than you might realize. And the formula for figuring that out isn’t pretty. Hiding the formula’s complexity with a function can help you keep your code organized.
+It can take a lot longer to pay off your credit card balance than you might realize. And the formula for
+figuring that out isn’t pretty. Hiding the formula’s complexity with a function can help you keep your code organized.
 
 Write a program that will help you determine how many months it will take to pay off a credit card balance.
 The program should ask the user to enter the balance of a credit card, the APR of the card, and their monthly payment.
