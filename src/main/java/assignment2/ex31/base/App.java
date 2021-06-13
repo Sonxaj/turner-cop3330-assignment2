@@ -40,7 +40,7 @@ Challenge
 Implement this as a GUI program that allows the user to use a slider control for the intensity, and update the interface in real time as the slider moves.
  */
 
-package assignment2.ex31;
+package assignment2.ex31.base;
 
 import java.util.Scanner;
 

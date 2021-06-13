@@ -1,5 +1,6 @@
 package assignment2.ex31;
 
+import assignment2.ex31.base.App;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
