@@ -63,6 +63,7 @@ public class PasswordGenerator {
         return out;
     }
 
+    // password is originally in order of concatenation, so we must randomize
     public String randomizePassword(String password){
         List<Object> out = Arrays.asList(password.split(""));
         Collections.shuffle(out);
