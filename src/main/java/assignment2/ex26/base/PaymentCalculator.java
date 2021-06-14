@@ -1,6 +1,7 @@
 package assignment2.ex26.base;
 
 public class PaymentCalculator {
+
     public int calculateMonthsUntilPaidOff(int balance, int apr, int monthlyPayment){
         double i = ((double) apr / 100) / 365.0;
 
